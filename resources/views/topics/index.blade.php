@@ -73,7 +73,8 @@
                 <td>{{$topic->title}}</td> <td>{{$topic->body}}</td> <td>{{$topic->user_id}}</td> <td>{{$topic->category_id}}</td> <td>{{$topic->reply_count}}</td> <td>{{$topic->view_count}}</td> <td>{{$topic->last_reply_user_id}}</td> <td>{{$topic->order}}</td> <td>{{$topic->excerpt}}</td> <td>{{$topic->slug}}</td>
 
                 <td class="text-xs-right">
-                  <a class="btn btn-sm btn-primary" href="{{ route('topics.show', $topic->id) }}">
+                  {{--<a class="btn btn-sm btn-primary" href="{{ route('topics.show', $topic->id) }}">--}
+                  <a href="{{ route('topics.show', [$topic->id]) }}" title="{{ $topic->title }}">
                     V
                   </a>
 
